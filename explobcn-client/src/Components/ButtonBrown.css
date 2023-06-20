@@ -1,0 +1,12 @@
+.button-primary {
+  font-size: 14px;
+  background-color: #594A37;
+  margin-top: 25px;
+  padding: 16px 24px;
+  transition: .7s ease-in-out;
+  color: white;
+}
+
+.button-primary:hover {
+  opacity: 0.9;
+}
