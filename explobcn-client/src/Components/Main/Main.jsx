@@ -5,14 +5,27 @@ import CelebrationIcon from '@mui/icons-material/Celebration';
 import Map from '../Map/Map'
 import { getItinerary } from "../../services/itinerary.service.js";
 import "./Main.css";
+import { useEffect, useState } from "react";
 
 const Main = () => {
 
-getItinerary('649211ce6d4ede812d50eb84')
-.then(response => {
-  console.log('REPSONE', response)
-}) 
-.catch(err => console.log(err)) 
+  const [locations, setLocations] = useState([]);
+  const [mainAttraction, setMainAttraction] = useState({});
+
+  useEffect(()=> {
+    getItinerary('649211ce6d4ede812d50eb84')
+    .then(({data}) => {
+      console.log('REPSONE', data.attraction)
+      setLocations(data.locationList)
+      setMainAttraction(data.attraction)
+    }) 
+    .catch(err => console.log(err)) 
+
+  }, [])
+  useEffect(()=> {
+    
+console.log('hello', mainAttraction)
+  }, [locations, mainAttraction])
 
   return (
     <>
@@ -22,7 +35,7 @@ getItinerary('649211ce6d4ede812d50eb84')
       <div className="main__container">
         <div className="main__container__image">
         {/* Here we import the Map component  */}
-        <Map/>
+        <Map locationsList={locations} attraction={mainAttraction}/>
         <div className="button_main">
       <button className = "welcomebutton"><RestaurantIcon/> Restaurant</button>
       <button className = "welcomebutton"><LuggageIcon/> Accomodations</button>
