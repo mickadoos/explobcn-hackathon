@@ -33,6 +33,6 @@ Este proyecto se encuentra bajo la Licencia MIT. Puedes consultar el archivo [LI
 
 ## Contacto
 
-Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nuestro equipo.
+Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con nuestro maravilloso equipo.
 
 ¡Gracias por tu interés en mejorar el turismo en Barcelona! Esperamos que esta aplicación sea de utilidad para los visitantes y contribuya a una experiencia turística más equilibrada y enriquecedora.
